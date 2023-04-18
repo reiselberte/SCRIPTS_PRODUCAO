@@ -1,0 +1,32 @@
+/*Chamado - ID: 49351 
+Favor informar o seu ramal ou algum próximo:9511
+Bom dia!
+Solicito a mudança do nome de cadastro no talão do Auto de Infração do Servidor João Damasceno Cerqueira Júnior para Gutemberg Barreto Cerqueira.
+1202341/2023
+
+SELECT *
+FROM SIGS_PROD.PR_DOCUMENTO 
+WHERE DOCU_TDOC_ID = 1065
+AND   DOCU_NUMERO_DOC = '1202341'
+AND   DOCU_ANO = 2023;-- joão damasceno 11010
+
+SELECT *
+FROM SIGS_PROD.FI_TALAO
+WHERE   TALA_USUA_ID = 11010
+AND TALA_INTERVALO_INICIO = 1202341;-- TALA_ID 512201
+
+SELECT *
+FROM SIGS_PROD.SS_USUARIO 
+WHERE UPPER (USUA_NOME) LIKE '%GUTEMBERG%'
+ORDER BY USUA_NOME;--11004*/
+
+
+UPDATE SIGS_PROD.FI_TALAO 
+SET TALA_USUA_ID = 11004
+WHERE TALA_ID = 512201;
+
+
+/*UPDATE SIGS_PROD.FI_TALAO 
+SET TALA_USUA_ID = 11010
+WHERE TALA_ID = 455761;
+*/

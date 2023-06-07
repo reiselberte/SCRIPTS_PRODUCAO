@@ -7,7 +7,7 @@ Vevento_cle NUMBER;
     
 BEGIN
 --dando valor a variavel, utilizando o nextval  da pr_evento_cle
-    Vevento_cle:= SIGS_PROD.PR_EVENTO_CLE_SEQ.NEXTVAL
+    Vevento_cle:= SIGS_PROD.PR_EVENTO_CLE_SEQ.NEXTVAL;
 
 --Agora eu pego a variavel e substituo onde seria o nextval    
 INSERT INTO SIGS_PROD.PR_EVENTO_CLE
